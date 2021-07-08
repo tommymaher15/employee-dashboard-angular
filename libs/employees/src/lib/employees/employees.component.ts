@@ -32,7 +32,15 @@ export class EmployeesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+<<<<<<< Updated upstream
     this.elementData = ELEMENT_DATA;
+=======
+    
+    this.employees$.subscribe(employees => {
+      console.log(employees, 'Employees ');
+    })
+   Testing 
+>>>>>>> Stashed changes
 
     this.employeeTableColumns = [
       {
