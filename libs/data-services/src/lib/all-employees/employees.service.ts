@@ -14,11 +14,17 @@ export class EmployeesService {
 
   
   getEmployees(): Observable<EmployeesService> {
+    
     const query = EmployeeQuery
+
+
+
     const allEmployees = this.apollo.query({ query })
+ 
     return from(allEmployees).pipe(pluck('data', 'employees')
     )
 }
 
+ // create a method that will paginate the response and return the results
 
 }

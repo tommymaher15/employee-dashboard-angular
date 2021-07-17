@@ -14,7 +14,7 @@ export class EmployeesComponent implements OnInit {
 
   employees$ = this.employeesService.getEmployees();
 
-  constructor(
+  constructor( 
     public employeesService: EmployeesService
   ) {}
 
@@ -26,11 +26,15 @@ export class EmployeesComponent implements OnInit {
   ngOnInit(): void {
     
     this.employees$.subscribe(employees => {
+      console.log(employees)
 return employees
     })
 
 
+
+
     this.employeeTableColumns = [
+
       {
         name: 'Name',
         dataKey: 'Name',
